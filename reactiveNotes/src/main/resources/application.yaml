@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  r2dbc:
+    url: r2dbc:mysql://127.0.0.1:3306/RoomBoss
+    username: root
+    password: pass
+  config:
+    activate:
+      on-profile: dev
+logging:
+  level:
+    org.springframework.data.r2dbc: Debug
